@@ -11,20 +11,26 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #212121;
+    background-color: #0c0d0c;
 }
 
 .container {
     position: relative;
 }
 
+.lion {
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+}
+
 .clock {
-    width: 300px;
-    height: 300px;
+    width: 700px;
+    height: 700px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.3);
-    border: 2px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0px, 0px, 30px rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(210, 14, 14, 0.25);
+    box-shadow: 0px, 0px, 30px rgba(201, 6, 6, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +46,9 @@ body {
 .clock span b {
     transform: rotate(calc(-30deg * var(--i)));
     display: inline-block;
-    font-size: 20px;
+    font-size: 40px;
+    font-weight: bold;
+    color: rgb(114, 85, 65)
 }
 
 .clock::before {
@@ -50,6 +58,7 @@ body {
     height: 8px;
     border-radius: 50%;
     background-color: #fff;
+    z-index: 2;
 }
 
 .hand {
@@ -62,7 +71,7 @@ body {
 .hand i {
     position: absolute;
     background-color: var(--clr);
-    width: 4px;
-    height: 70px;
+    width: 8px;
+    height: var(--h);
     border-radius: 8px;
 }
